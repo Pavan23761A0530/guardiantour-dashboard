@@ -155,18 +155,18 @@ const SOSMonitoring = () => {
             </CardHeader>
             <CardContent>
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="p-4 bg-warning/10 rounded-lg border border-warning/20">
+                <div className="p-4 bg-gradient-warning/20 rounded-lg border border-warning/40 shadow-soft">
                   <div className="flex items-center space-x-2 mb-2">
-                    <div className="w-3 h-3 bg-warning rounded-full"></div>
+                    <div className="w-3 h-3 bg-gradient-warning rounded-full shadow-sm"></div>
                     <span className="font-semibold text-warning">Level 1: Manager Alert</span>
                   </div>
                   <p className="text-sm text-muted-foreground">
                     First 5-second hold triggers manager notification only. Suitable for minor issues or assistance requests.
                   </p>
                 </div>
-                <div className="p-4 bg-danger/10 rounded-lg border border-danger/20">
+                <div className="p-4 bg-gradient-danger/20 rounded-lg border border-danger/40 shadow-soft">
                   <div className="flex items-center space-x-2 mb-2">
-                    <div className="w-3 h-3 bg-danger rounded-full"></div>
+                    <div className="w-3 h-3 bg-gradient-danger rounded-full shadow-sm animate-pulse"></div>
                     <span className="font-semibold text-danger">Level 2: Police + Manager</span>
                   </div>
                   <p className="text-sm text-muted-foreground">
@@ -201,15 +201,15 @@ const SOSMonitoring = () => {
                 <CardContent>
                   <div className="space-y-4">
                     {activeAlerts.map((alert) => (
-                      <div key={alert.id} className="p-4 border-2 border-danger/20 bg-danger/5 rounded-lg">
+                      <div key={alert.id} className="p-4 border-2 border-danger/30 bg-gradient-to-r from-danger/10 to-danger/5 rounded-lg shadow-medium backdrop-blur-sm">
                         <div className="flex items-start justify-between mb-4">
                           <div className="flex-1">
                             <div className="flex items-center space-x-2 mb-2">
                               <span className="font-semibold text-lg">{alert.tourist}</span>
                               <Badge variant="outline">{alert.uvid}</Badge>
-                              <Badge 
+                               <Badge 
                                 variant={alert.level === 2 ? "destructive" : "default"}
-                                className={alert.level === 1 ? "bg-warning/20 text-warning border-warning/30" : ""}
+                                className={alert.level === 1 ? "bg-gradient-warning text-warning-foreground border-warning/50 shadow-md" : "bg-gradient-danger text-danger-foreground shadow-md"}
                               >
                                 Level {alert.level}
                               </Badge>
@@ -233,10 +233,10 @@ const SOSMonitoring = () => {
                             </div>
                             <p className="text-sm text-foreground mb-3">{alert.description}</p>
                           </div>
-                          <Badge 
-                            variant={alert.priority === "High" ? "destructive" : "default"}
-                            className={alert.priority === "Medium" ? "bg-warning/20 text-warning border-warning/30" : ""}
-                          >
+                           <Badge 
+                             variant={alert.priority === "High" ? "destructive" : "default"}
+                             className={alert.priority === "Medium" ? "bg-gradient-warning text-warning-foreground border-warning/50 shadow-md" : alert.priority === "High" ? "bg-gradient-danger text-danger-foreground shadow-md" : "bg-gradient-card border-primary/30 shadow-sm"}
+                           >
                             {alert.priority}
                           </Badge>
                         </div>

@@ -80,6 +80,7 @@ export default {
         'gradient-card': 'var(--gradient-card)',
         'gradient-success': 'var(--gradient-success)',
         'gradient-danger': 'var(--gradient-danger)',
+        'gradient-warning': 'var(--gradient-warning)',
       },
       boxShadow: {
         'soft': 'var(--shadow-soft)',
