@@ -34,10 +34,10 @@ export default {
           foreground: "hsl(var(--success-foreground))",
           light: "hsl(var(--success-light))",
         },
-        warning: {
-          DEFAULT: "hsl(var(--warning))",
-          foreground: "hsl(var(--warning-foreground))",
-          light: "hsl(var(--warning-light))",
+        info: {
+          DEFAULT: "hsl(var(--info))",
+          foreground: "hsl(var(--info-foreground))",
+          light: "hsl(var(--info-light))",
         },
         danger: {
           DEFAULT: "hsl(var(--danger))",
@@ -80,7 +80,7 @@ export default {
         'gradient-card': 'var(--gradient-card)',
         'gradient-success': 'var(--gradient-success)',
         'gradient-danger': 'var(--gradient-danger)',
-        'gradient-warning': 'var(--gradient-warning)',
+        'gradient-info': 'var(--gradient-info)',
       },
       boxShadow: {
         'soft': 'var(--shadow-soft)',

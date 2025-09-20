@@ -38,7 +38,7 @@ const ReportsAnalytics = () => {
       value: 5,
       description: "Emergency notifications",
       icon: AlertTriangle,
-      variant: "warning" as const,
+      variant: "info" as const,
       trend: { value: 2, isPositive: false }
     },
     {

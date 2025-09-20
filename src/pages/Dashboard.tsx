@@ -21,7 +21,7 @@ const Dashboard = () => {
       value: 3,
       description: "2 resolved, 1 in progress",
       icon: AlertTriangle,
-      variant: "warning" as const,
+      variant: "info" as const,
       trend: { value: 5, isPositive: false }
     },
     {

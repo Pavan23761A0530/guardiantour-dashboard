@@ -11,7 +11,7 @@ interface StatsCardProps {
     value: number;
     isPositive: boolean;
   };
-  variant?: "default" | "success" | "warning" | "danger";
+  variant?: "default" | "success" | "info" | "danger";
 }
 
 const StatsCard = ({ 
@@ -25,14 +25,14 @@ const StatsCard = ({
   const variantStyles = {
     default: "border-border",
     success: "border-success/20 bg-success/5",
-    warning: "border-warning/20 bg-warning/5",
+    info: "border-info/20 bg-info/5",
     danger: "border-danger/20 bg-danger/5"
   };
 
   const iconStyles = {
     default: "text-primary",
     success: "text-success",
-    warning: "text-warning",
+    info: "text-info",
     danger: "text-danger"
   };
 

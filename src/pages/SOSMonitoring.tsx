@@ -17,7 +17,7 @@ const SOSMonitoring = () => {
       value: 2,
       description: "Currently being handled",
       icon: AlertTriangle,
-      variant: "warning" as const
+      variant: "info" as const
     },
     {
       title: "Resolved Today",
@@ -143,10 +143,10 @@ const SOSMonitoring = () => {
           </div>
 
           {/* Two-Level Trigger System Explanation */}
-          <Card className="border-warning/20 bg-warning/5">
+          <Card className="border-info/20 bg-info/5">
             <CardHeader>
               <CardTitle className="flex items-center space-x-2">
-                <AlertTriangle className="h-5 w-5 text-warning" />
+                <AlertTriangle className="h-5 w-5 text-info" />
                 <span>Two-Level SOS Trigger System</span>
               </CardTitle>
               <CardDescription>
@@ -155,10 +155,10 @@ const SOSMonitoring = () => {
             </CardHeader>
             <CardContent>
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="p-4 bg-gradient-warning/20 rounded-lg border border-warning/40 shadow-soft">
+                <div className="p-4 bg-gradient-info/20 rounded-lg border border-info/40 shadow-soft">
                   <div className="flex items-center space-x-2 mb-2">
-                    <div className="w-3 h-3 bg-gradient-warning rounded-full shadow-sm"></div>
-                    <span className="font-semibold text-warning">Level 1: Manager Alert</span>
+                    <div className="w-3 h-3 bg-gradient-info rounded-full shadow-sm"></div>
+                    <span className="font-semibold text-info">Level 1: Manager Alert</span>
                   </div>
                   <p className="text-sm text-muted-foreground">
                     First 5-second hold triggers manager notification only. Suitable for minor issues or assistance requests.
@@ -209,7 +209,7 @@ const SOSMonitoring = () => {
                               <Badge variant="outline">{alert.uvid}</Badge>
                                <Badge 
                                 variant={alert.level === 2 ? "destructive" : "default"}
-                                className={alert.level === 1 ? "bg-gradient-warning text-warning-foreground border-warning/50 shadow-md" : "bg-gradient-danger text-danger-foreground shadow-md"}
+                                className={alert.level === 1 ? "bg-gradient-info text-info-foreground border-info/50 shadow-md" : "bg-gradient-danger text-danger-foreground shadow-md"}
                               >
                                 Level {alert.level}
                               </Badge>
@@ -235,7 +235,7 @@ const SOSMonitoring = () => {
                           </div>
                            <Badge 
                              variant={alert.priority === "High" ? "destructive" : "default"}
-                             className={alert.priority === "Medium" ? "bg-gradient-warning text-warning-foreground border-warning/50 shadow-md" : alert.priority === "High" ? "bg-gradient-danger text-danger-foreground shadow-md" : "bg-gradient-card border-primary/30 shadow-sm"}
+                             className={alert.priority === "Medium" ? "bg-gradient-info text-info-foreground border-info/50 shadow-md" : alert.priority === "High" ? "bg-gradient-danger text-danger-foreground shadow-md" : "bg-gradient-card border-primary/30 shadow-sm"}
                            >
                             {alert.priority}
                           </Badge>
@@ -317,7 +317,7 @@ const SOSMonitoring = () => {
                           <div className="text-right">
                             <Badge 
                               variant={incident.priority === "High" ? "destructive" : incident.priority === "Medium" ? "default" : "secondary"}
-                              className={incident.priority === "Medium" ? "bg-warning/20 text-warning border-warning/30" : ""}
+                              className={incident.priority === "Medium" ? "bg-info/20 text-info border-info/30" : ""}
                             >
                               Level {incident.level}
                             </Badge>
